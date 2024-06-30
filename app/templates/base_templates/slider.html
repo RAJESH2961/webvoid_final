@@ -1,0 +1,168 @@
+{% load static %}
+<style>
+  .carousel-caption {
+      position: absolute;
+      bottom: 20px; /* Adjust as needed */
+      left: 20px; /* Adjust as needed */
+      right: 20px; /* Adjust as needed */
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.6); /* Optional: add background for readability */
+      padding: 10px;
+      border-radius: 5px;
+      display: block; /* Ensure captions are always displayed */
+  }
+  
+  .carousel-caption > h1 {
+      color: rgb(255, 153, 0);
+  }
+  
+</style>
+  <body class="p-3 m-0 border-0 bd-example m-0 border-0">
+
+    <!-- Example Code -->
+    <!-- <img src="{% static 'images/slider/carousel-1.jpg' %}" class="d-block w-100" alt="Company services"> -->
+
+        
+    <div id="carouselExampleCaptions" class="carousel slide">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'images/home_carousel/carousel-1.jpg' %}" class="d-block w-100" alt="Company services">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Web Development</h1>
+            <p>From stunning website design and development to powerful digital marketing strategies, we leverage the latest technologies and industry best practices to elevate your brand and drive meaningful results.</p>
+            <!-- <h4>At [Your Company Name], we offer professional web development services tailored to your unique needs. In today's digital age, having a strong online presence is crucial for any business to thrive. Whether you're a startup looking to establish your brand or an established company seeking to revamp your website, our team of expert developers is here to help.</h4> -->
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'images/home_carousel/carousel-2.jpg' %}" class="d-block w-100" alt="Company services">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Data science</h1>
+            <p>Unlock the power of data with our comprehensive data science services. From data analysis and visualization to machine learning and predictive modeling, we help businesses gain valuable insights and make informed decisions. Whether you're looking to optimize your marketing strategies, improve operational efficiency, or enhance customer experience, our team of data scientists is here to help you harness the full potential of your data.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'images/home_carousel/carousel-3.jpg' %}" class="d-block w-100" alt="Company services">
+          <div class="carousel-caption d-none d-md-block">
+            <h1>Automation and AI</h1>
+            <p>Experience the future of technology with our automation and artificial intelligence solutions. From automating repetitive tasks to developing intelligent systems that learn and adapt, we help businesses streamline operations, improve productivity, and drive innovation. Whether you're looking to automate business processes, enhance customer service with chatbots, or implement advanced AI algorithms, our team of experts is here to transform your business with cutting-edge automation and AI solutions.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+      
+    <!-- End Example Code -->
+
+<!-- {% load static %}
+
+{% block css %}
+<style>
+  .carousel {
+      max-height: 400px; /* Set the desired maximum height */
+      overflow: hidden; /* Hide overflow to keep the carousel within the height */
+  }
+  
+  .carousel img {
+      width: 100%; /* Ensure the image takes full width */
+      height: auto; /* Maintain the aspect ratio */
+  }
+  
+  .carousel-inner {
+      position: relative;
+      height: 100%; /* Ensure inner div takes full height */
+  }
+  
+  .carousel-item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; /* Ensure each item takes full height */
+      display: flex;
+      align-items: center; /* Center content vertically */
+      justify-content: center; /* Center content horizontally */
+  }
+  
+  .carousel-caption {
+      position: absolute;
+      bottom: 20px; /* Adjust as needed */
+      left: 20px; /* Adjust as needed */
+      right: 20px; /* Adjust as needed */
+      z-index: 10;
+      background: rgba(0, 0, 0, 0.5); /* Optional: add background for readability */
+      padding: 10px;
+      border-radius: 5px;
+      display: block; /* Ensure captions are always displayed */
+  }
+  
+  .carousel-caption > h1 {
+      color: rgb(255, 153, 0);
+  }
+  
+  @media (max-width: 768px) {
+      .carousel-caption > h1 {
+          font-size: 1.2rem;
+      }
+      .carousel-caption > p {
+          font-size: 0.8rem;
+      }
+  }
+  </style>
+
+{% endblock css %}
+
+{% block body %}
+
+
+<div id="carouselExampleDark" class="carousel carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner" > 
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="{% static 'images/slider/carousel-1.jpg' %}" class="d-block w-100" alt="Company services">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Web Development</h1>
+          <p>From stunning website design and development to powerful digital marketing strategies, we leverage the latest technologies and industry best practices to elevate your brand and drive meaningful results.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="{% static 'images/slider/carousel-2.jpg' %}" class="d-block w-100" alt="Company services">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Second slide label</h1>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'images/slider/carousel-3.jpg' %}" class="d-block w-100" alt="Company services">
+        <div class="carousel-caption d-none d-md-block">
+          <h1>Third slide label</h1>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+ 
+  {% endblock body %} -->

@@ -1,0 +1,136 @@
+{% extends 'base_templates/base.html' %}
+{% block title %}<title>Webvoid Contact</title>{% endblock title %}
+
+{% load static %}
+
+{% block favicon %}
+<link rel="icon" href="{static 'images/logo/webvoid_logo.ico'}" type="image/x-icon">
+{% endblock favicon %}
+
+{% block css %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+        height: 100vh;
+        background: rgb(34,93,195);
+        background: linear-gradient(180deg, rgba(34,93,195,0) 0%, rgba(255,255,255,1) 43%, rgb(185, 205, 129) 100%, rgb(1, 53, 208) 100%);
+    }
+
+    .form-container {
+        background: #fff;
+        padding: 20px 40px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    label {
+        margin: 10px 0 5px;
+        font-weight: bold;
+
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #5cb85c;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #4cae4c;
+    }
+
+    @media (max-width: 600px) {
+        .form-container {
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        label, input, textarea, button {
+            font-size: 16px;
+        }
+    }
+    .row{
+        align-items: center;
+    }
+    #contact-form{
+        width: 70%;
+    }
+  
+</style>
+{% endblock css %}
+
+{% block body %}
+<div class="container mt-5" id="contact-form">
+        <div class="row">
+        <div class="col-lg-9 col-sm-12">
+            <h2 style="color:rgb(11, 11, 251); font-size: 2.5rem; user-select: none; -webkit-user-select: none; cursor: pointer; text-align: center; margin-top: 2rem;">Contact us! </h2>
+            <!-- <img src="{}" alt=""> -->
+        <form method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required maxlength="30" placeholder="Enter Your Name">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter valid email address">
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="number" id="mobile" name="mobile" required minlength="10" maxlength="13" placeholder="+91 79xxx xxxxx">
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required maxlength="100" placeholder="Enter Subject">
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required maxlength="1000" placeholder="Enter Your Message"></textarea>
+        <div class="button ms-auto">
+            <button type="reset" class="w-40 bg-warning mb-5" >Clear</button>
+            <button type="submit" class="w-40 bg-success mx-3" >Submit</button>
+        </div> 
+    </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}

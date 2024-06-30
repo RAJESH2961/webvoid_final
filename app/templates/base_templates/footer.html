@@ -1,0 +1,200 @@
+<style>
+    /* Custom styles */
+    .footer {
+      background-color: #121213;
+      margin-top: 2rem;;
+    }
+    .footer {
+      color: #fff;
+      padding: 30px 0;
+    }
+    .footer h4 {
+      color: #f78f07;
+      font-size: 18px;
+    }
+    .footer h4{
+        font-weight: bolder;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        position:relative;
+
+      }
+
+      /* line for bottom in heeading tag */
+  .footer h4::before{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-10px;
+    background-color: rgb(247, 143, 7);
+    height:3px;
+    width:50px;
+    box-sizing: border-box;
+  }
+  .footer ul li:not(last-child){
+    margin-bottom: 10px;
+  }
+
+  .footer a i:hover{
+    font-size: 2.5rem;
+    text-shadow: #ee0d0d;
+    transition-property: all 0.5s ease-in 1s;
+  }
+   
+   .footer a i {
+    font-size: 2rem;
+    transition: all 0.5s text-shadow 0.5s linear;
+}
+
+.footer a i:hover {
+    font-size: 2.2rem;
+    text-shadow: 0 0 5px #d16666;
+}
+
+  
+  .footer ul li a{
+    text-transform: capitalize;
+    text-decoration: none;
+    display: block;
+    font-weight : 400;
+    transition : all 0.3s ease;
+  }
+  .footer ul li a:hover{
+    color:var(--text-color);
+    padding-left: 7px;
+  }
+  .footer ul i{
+    padding: 0.3rem;
+    font-weight: bold;
+  }
+
+
+
+
+    .footer ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .footer ul li {
+      margin-bottom: 10px;
+    }
+    .footer ul li a {
+      color: #fff;
+      text-decoration: none;
+    }
+    .footer ul li a:hover {
+      color: #f78f07;
+    }
+    .social-icons {
+      list-style: none;
+      padding-left: 0;
+    }
+    .social-icons li {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    .social-icons li:last-child {
+      margin-right: 0;
+    }
+    .social-icons li a {
+      color: #fff;
+      font-size: 20px;
+      text-decoration: none;
+      
+    }
+    .social-icons li a:hover {
+      color: #f0efed;
+    }
+  </style>
+  
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <!-- aboutus -->
+          <div class="col-lg-3 col-sm-6">
+            <h4>About Us</h4>
+            <ul>
+              <li><a href="{% url 'aboutus' %}">About Our Company</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Careers</a></li>
+              <li class="dropdown-toggle " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Careers
+                </a>
+                <ul class="dropdown-menu bg-dark">
+                  <li><a class="dropdown-item bg-dark" href="#">Internships</a></li>
+                  <li><a class="dropdown-item bg-dark" href="#">Digital Marketing</a></li>
+                  <li><a class="dropdown-item bg-dark" href="#">Testing</a></li>
+                  <!-- <li><a class="dropdown-item bg-dark" href="#">Testing</a></li> -->
+                  <!-- <li><a class="dropdown-item bg-dark" href="#">Testing</a></li> -->
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- services -->
+          <div class="col-lg-3 col-sm-6">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="{% url 'services'%}" target="_blank">Web Development</a></li>
+              <li><a href="{% url 'services'%}" target="_blank">Mobile App Development</a></li>
+              <li><a href="{% url 'services'%}" target="_blank">E-commerce Solutions</a></li>
+              <li><a href="{% url 'services'%}" target="_blank">Click Here for More Services</a></li>
+  
+              <!-- {% comment %} <li><a href="#">Internships</a></li> {% endcomment %} -->
+            </ul>
+          </div>
+          <!-- contact -->
+          <div class="col-lg-3 col-sm-6">
+              <h4>Contact</h4>
+              <p><b>Mobile :</b> +91 7702548947
+              </p>
+              <p class="mb-2"><b>Email :</b><span><a href="mailto:contactus@webvoidtechnologies.com">contactus@webvoidtechnologies.com</a></p>
+              <a href="tel:+917702548947" target="_blank" style="color: #3314BE;" role="button"><i  class="fa fa-phone fa-2x"></i></a></span>
+  
+              <a class="footer-links" href="https://wa.me/+917702548947?text=Hi there! I'm interested in learning more about your services." target="_blank" style="color: #25d366;" role="button">
+                      <i class="fab fa-whatsapp fa-2x" ></i>
+                  </a>
+  
+                  <a href="mailto:contactus@webvoidtechnologies.com" style="color:rgb(43, 124, 190);" role="button"><i class="fas fa-envelope fa-2x" ></i></a>
+                  <br>
+                  <span class="material-symbols-outlined" style="color:red;">
+                    location_on
+                    </span>
+                
+                      <a href="https://maps.app.goo.gl/VB8FMSYG75gasitW8"style="color:white; text-align-center text-decoration:none; " target="_blank" title="Location: Kongareddy Palle" data-category="software company" data-address="KR Palle(Autonagar)">Get-Directions</a>
+  
+                  
+          </div>
+          <!-- follow us  -->
+          <div class="col-lg-3 col-sm-6">
+              <h4>Follow-Us</h4>
+              <div >
+                  <a href="#!" target="_blank"  style="color: #F2174E;" href="#!" role="button"><i class="fab fa-instagram fa-2x"></i></a>
+              
+              
+                  <a href="#!" target="_blank"  style="color: #491ee4;" href="#!" role="button"> <i class="fa-brands fa-linkedin fa-2x"></i></i></a>
+                  
+              
+                  <a style="color: #01a5f7;" href="#!" role="button"><i class="fa-brands fa-x-twitter fa-2x"></i></a>
+                  <a style="color: #dd4b39;" href="#!" role="button"><i class="fab fa-google fa-2x"></i></a>
+                  <a style="color: #1223E2;" href="#!" role="button"><i class="fab fa-facebook fa-2x"></i></a>
+                    </div>
+  
+  
+          </div>
+        </div>
+      </div>
+      <hr style="width:100%; border:1px solid rgb(255, 255, 253);">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- <p>&copy; 2024 <b>Webvoid Technologies PVT LTD</b>| All rights reserved |</p> -->
+            <p><b>Webvoid Technologies PVT LTD</b>| All rights reserved |</p>
+          </div>
+          <div class="col-md-6 text-right">
+            <p>Designed & Developed by <a href="www.webvoidtechnologies.com">Webvoid Technologies</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+  

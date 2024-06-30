@@ -1,0 +1,241 @@
+{% extends 'base_templates/base.html' %}
+{% block title %}<title>Webvoid Technologies</title>{% endblock title %}
+
+{% block favicon %}
+{% endblock favicon %}
+
+{% block css %}
+{% load static %}
+
+
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"> -->
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+    body{
+        font-family: "Rubik", sans-serif;
+    }
+  /* Increasing font size for about us */
+.about-us{
+  font-size: 1.2rem;
+}
+
+    #about-us{
+        /* width: 100%; */
+        margin-top: 2rem;
+    }
+    .images{
+        width:80%;
+        border-radius: 40px;
+    }
+    /* hiding the image when device size gets lower */
+    @media (max-width: 900px){
+        .images{
+            display: none;
+        }
+        #about-us{
+            width: 100%;
+        }
+    }
+
+    /* image section */
+    .image-section {
+            background-image: url("{% static 'images/main.jpg' %}");
+            background-size: cover;
+            height: 90vh; /* Adjust as needed */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .image-text {
+            font-size: 3.4rem; /* Adjust as needed */
+            font-weight: bold;
+            text-shadow: 0px 0px 15px #12c7f0;          
+            color:white;
+            /* margin-bottom: 12rem; */
+        }
+
+        .image-text-1{
+            font-size: 1.8rem; /* Adjust as needed */
+            font-weight: bold;
+            color:white;
+            text-shadow: 0px 0px 15px #12c7f0;            
+            /* margin-bottom: 14rem; */
+
+        }   
+        #short-intro_about_query{
+          font-size: 1.3rem;
+          margin: 1rem 0px;
+        }
+
+        .row {
+    margin-top: 4rem;
+}
+
+
+/* projects card stylings */
+
+.card {
+    cursor: pointer;
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Add some space between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow */
+    overflow: hidden; /* Ensure content does not overflow */
+    transition: box-shadow 0.5s ease; /* Smooth transition for shadow */
+}
+
+/* Card container hover effect */
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Card image */
+.card-img-top {
+    border-top-left-radius: 8px; /* Rounded corners for top left */
+    border-top-right-radius: 8px; /* Rounded corners for top right */
+    transition: transform 0.5s ease; /* Smooth transition for image scaling */
+}
+
+/* Card image hover effect */
+.card-img-top:hover {
+    transform: scale(1.1); /* Scale the image up */
+}
+
+/* Card body */
+.card-body {
+    padding: 20px;
+}
+
+/* Card title */
+.card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000; /* Dark text color */
+}
+
+/* Card text */
+.card-text {
+    font-size: 17px;
+    color: #000000; /* dark text color */
+   
+}
+
+
+        
+</style>
+{% endblock css %}
+
+
+
+{% block body %}
+
+
+  <!-- Image Section -->
+<div class="image-section">
+    <div class="image-text">Innovate Your Digital Presence</div>
+    <div class="image-text-1">Unlock the potential of your business with cutting-edge software solutions tailored for success.</div>
+</div>
+<div id="cmpny_short_detail">
+<p id="short-intro_about_query">Are you looking for top-notch software development services in Chittoor, AP? Look no further than WebVoid Technologies. Our team of experts is dedicated to delivering high-quality, customized solutions to meet your business needs. With a focus on innovation and efficiency, we are committed to helping you stay ahead in the competitive tech landscape. Choose WebVoid Technologies for all your software development needs and experience the difference in quality and reliability.</p>
+</div>
+
+<h1 class="text-center">Our Services</h1>
+{% include 'base_templates/slider.html' %}
+
+
+
+<!-- projects section -->
+<p class="mt-3 mb-2"></p>
+<h1 class="text-center">Projects</h1>
+<div class="container-fluid">
+<div class="row row-cols-1  row-cols-md-3 row-cols-sm-2">
+<!-- Card 1 -->
+<div class="col">
+  <div class="card shadow-lg">
+      <img src="{% static 'images/services/img-1.jpg'%}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+          <h5 class="card-title fw-bold">Web Application Development</h5>
+          <p class="card-text">Crafted dynamic web applications tailored to meet specific client requirements, ensuring seamless user experiences and optimal performance.</p>
+      </div>
+  </div>
+</div>
+
+<!-- Card 2 -->
+<div class="col">
+  <div class="card shadow-lg">
+      <img src="{% static 'images/services/img-2.jpg'%}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+          <h5 class="card-title fw-bold">Customized Software Solutions</h5>
+          <p class="card-text">Delivered customized software solutions designed to address unique business challenges, empowering organizations with enhanced efficiency and productivity.</p>
+      </div>
+  </div>
+</div>
+
+<!-- Card 3 -->
+<div class="col">
+  <div class="card shadow-lg">
+      <img src="{% static 'images/services/img-3.jpg' %}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+          <h5 class="card-title fw-bold">E-commerce Software Solutions</h5>
+          <p class="card-text">Engineered robust e-commerce platforms equipped with secure payment gateways and scalable architecture, facilitating seamless online transactions and business growth.</p>
+      </div>
+  </div>
+</div>
+
+<!-- Card 4 -->
+<div class="col">
+  <div class="card">
+      <img src="{% static 'images/services/img-4.jpg' %}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+          <h5 class="card-title fw-bold">Cloud-Based Software Solutions</h5>
+          <p class="card-text">Implemented cloud-based software solutions to optimize accessibility, data storage, and collaboration for remote teams.</p>
+      </div>
+  </div>
+</div>
+
+<!-- Card 5 -->
+<div class="col">
+  <div class="card">
+      <img src="{% static 'images/services/img-1.jpg' %}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+          <h5 class="card-title fw-bold">CRM Integration Services</h5>
+          <p class="card-text">Integrated CRM systems seamlessly into existing software infrastructure, streamlining customer relationship management processes and enhancing organizational efficiency.</p>
+      </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+<!--About us-->
+<div class="container-fluid" id="about-us">
+    <div class="row">
+    <div class="col-md-6 col-sm-12 about-us">
+        <h2>About Us</h2>
+        <p>WebVoid Technologies is a leading software development company based in Chittoor, AP. We specialize in creating cutting-edge solutions to meet the unique needs of our clients.</p>
+        <p>With a team of skilled professionals, we are committed to delivering high-quality software products that drive innovation and help businesses succeed in today's digital world.</p>
+        <p>Contact us today to learn more about how we can help you achieve your goals.</p>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <img src="{% static 'images/about-1.jpg' %}" alt="Right Side Image" class="images">
+    </div>
+</div>
+</div>
+
+<div class="container-fluid">
+  <div class="col">
+    <div class="row">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7768.138802180084!2d79.12320309166194!3d13.22095939297723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad595f2b04c5d1%3A0x3bfc9c0d9c25bf4e!2sIndustrial%20Estate%2C%20Chittoor%2C%20Andhra%20Pradesh%20517001!5e0!3m2!1sen!2sin!4v1716554244508!5m2!1sen!2sin" width="700" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

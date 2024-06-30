@@ -1,0 +1,57 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+  <div class="container-fluid d-flex align-items-center">
+    <a class="navbar-brand text-warning fw-bold" href="#">
+      <img src="{% static 'images/logo/webvoid_logo.ico' %}" alt="" style="max-height: 40px;" class="me-2">
+      WebVoid Technologies
+    </a>
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bold" href="{% url 'services' %}">Services</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Sector
+          </a>
+          <ul class="dropdown-menu" data-bs-theme="dark">
+            <li><a class="dropdown-item" href="#">Health Care</a></li>
+            <li><a class="dropdown-item" href="#">Financial Technology</a></li>
+            <li><a class="dropdown-item" href="#">Education</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar-brand{
+    font-size: 1.2rem;
+  }
+  img{
+    border-radius: 5px;
+  }
+  @media (min-width: 992px) {
+    .container-fluid {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .navbar-brand {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+</style>

@@ -1,0 +1,23 @@
+{% extends 'base_templates/base.html' %}
+
+{% block body %}
+<div class="container-fluid" style="margin-top:5rem;">
+  <div class="row">
+    {% for data in data %}
+    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+      <div class="card h-100">
+       
+        <img src="{{ data.image.url }}" class="card-img-top img-fluid" alt="...">
+        <div class="card-body">
+          <h5 class="card-title fw-bold">{{ data.title }}</h5>
+          <p class="card-text">{{ data.description }}</p>
+          <p class="card-text">{{ data.techstack }}</p>
+          <p class="card-text">{{ data.languages_used }}</p>
+        </div>
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock body %}

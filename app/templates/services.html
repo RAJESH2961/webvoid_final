@@ -1,0 +1,362 @@
+{% extends 'base_templates/base.html' %}
+{% block title %}<title>Webvoid Services</title>{% endblock title %}
+
+{% block favicon %}
+{% endblock favicon %}
+
+{% block css %}
+<style>
+.main{
+  margin-top: 4.5rem;
+}
+
+.card {
+    cursor: pointer;
+    border: 1px solid #ddd; /* Add a border */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 20px; /* Add some space between cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Add a shadow */
+    overflow: hidden; /* Ensure content does not overflow */
+    transition: box-shadow 0.8s ease; /* Smooth transition for shadow */
+}
+
+/* Card container hover effect */
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Card image */
+.card-img-top {
+    border-top-left-radius: 8px; /* Rounded corners for top left */
+    border-top-right-radius: 8px; /* Rounded corners for top right */
+    transition: transform 0.8s ease; /* Smooth transition for image scaling */
+}
+
+/* Card image hover effect */
+.card-img-top:hover {
+    transform: scale(1.1); /* Scale the image up */
+}
+
+/* Card body */
+.card-body {
+    padding: 20px;
+}
+
+/* Card title */
+.card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000; /* Dark text color */
+}
+
+/* Card text */
+.card-text {
+    font-size: 16px;
+    color: #050505; /* Semi-dark text color */
+}
+
+
+</style>
+{% endblock css %}
+
+{% block body %}
+{% load static %}
+<div class="container-fluid main">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4">
+        <!-- Card 1 -->
+      <div class="col">
+        <div class="card card-shadow">
+          <img src="{% static 'images/services/img-1.jpg'%}" class="card-img-top" alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Automation & AI</h5>
+            <p class="card-text">Embrace the future of 
+                business with our AI powered automation 
+                solutions. From 
+                streamlining processes to 
+                accelerating your digital 
+                transformation, we 
+                empower you to thrive in 
+                the fast-paced world of 
+                technology.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card card-shadow">
+          <img src="{% static 'images/services/img-2.jpg'%}" class="card-img-top" alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Deep Learning</h5>
+            <p class="card-text">Unlock new possibilities 
+                with our deep learning 
+                expertise. By harnessing 
+                the power of artificial 
+                neural networks, we help 
+                you drive innovation and 
+                solve complex challenges 
+                with ease.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card card-shadow">
+            <img src="{% static 'images/services/img-3.jpg' %}" class="card-img-top" alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Analytics And Insights</h5>
+            <p class="card-text">Make smarter decisions 
+                with our advanced 
+                analytics solutions. Our 
+                goal is simple: to provide 
+                you with actionable 
+                insights that drive 
+                tangible results and keep 
+                you ahead of the 
+                competition.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col">
+        <div class="card card-shadow">
+            <img src="{% static 'images/services/img-4.jpg' %}" class="card-img-top" alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Data Science</h5>
+            <p class="card-text">
+                Turn your data into a 
+                strategic asset with our 
+                data science solutions. 
+                From predictive analytics 
+                to machine learning, we're 
+                here to help you unlock 
+                the full potential of your 
+                data.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col">
+        <div class="card card-shadow">
+            <img src="{% static 'images/services/img-1.jpg' %}" class="card-img-top" alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Vision Analytics</h5>
+            <p class="card-text">See the future of your 
+                business with our vision 
+                intelligence solutions. 
+                Our cutting-edge 
+                technology enables you 
+                to gain valuable insights 
+                from visual data, giving</p>
+          </div>
+        </div>
+      </div>
+  <!-- Card 6 -->
+  <div class="col">
+    <div class="card card-shadow">
+      <img src="{% static 'images/services/img-1.jpg'%}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Text Analytics</h5>
+        <p class="card-text">Transform unstructured 
+            data into actionable 
+            insights with our text 
+            analytics solutions. 
+            Whether it's natural 
+            language processing or 
+            sentiment analysis, we 
+            help you extract valuable 
+            information from your text 
+            data.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Card 7 -->
+  <div class="col">
+    <div class="card card-shadow">
+      <img src="{% static 'images/services/img-2.jpg'%}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Data Labeling</h5>
+        <p class="card-text">Ensure the accuracy of 
+            your data with our 
+            advanced labeling 
+            platform. Powered by AI 
+            and machine learning, we 
+            provide you with highquality labels that enhance 
+            the performance of your 
+            algorithms and 
+            applications.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Card 8 -->
+  <div class="col">
+    <div class="card card-shadow">
+        <img src="{% static 'images/services/img-3.jpg' %}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">MLOps</h5>
+        <p class="card-text">Streamline your machine 
+            learning operations with 
+            our MLOps solutions. 
+            From model 
+            development to 
+            deployment, we help you 
+            accelerate the delivery of 
+            AI-powered applications 
+            and drive innovation at 
+            scale.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 9 -->
+  <div class="col">
+    <div class="card card-shadow">
+        <img src="{% static 'images/services/img-4.jpg' %}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Web Development</h5>
+        <p class="card-text">Revolutionize your web 
+            development process with 
+            our AI-driven solutions. By 
+            automating repetitive 
+            tasks, we empower your 
+            developers to focus on 
+            creating exceptional user 
+            experiences that drive 
+            business growth.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 10 -->
+  <div class="col">
+    <div class="card card-shadow">
+        <img src="{% static 'images/services/img-1.jpg' %}"  class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Enterprise Applications</h5>
+        <p class="card-text">Optimize your enterprise 
+            applications with our 
+            automation solutions. 
+            From workflow 
+            optimization to process 
+            automation, we help you 
+            increase productivity and 
+            efficiency across your 
+            organization.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 11 -->
+  <div class="col">
+    <div class="card card-shadow">
+      <img src="{% static 'images/services/img-2.jpg'%}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Internet Of Things</h5>
+        <p class="card-text">Connect and optimize 
+            your IoT devices with our 
+            innovative solutions. Our 
+            IoT expertise enables 
+            you to unlock new 
+            opportunities for 
+            innovation and growth, 
+            driving tangible results 
+            for your business.</p>
+      </div>
+    </div>
+  </div>
+  <!-- Card 12 -->
+  <div class="col">
+    <div class="card card-shadow">
+        <img src="{% static 'images/services/img-3.jpg' %}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">DevOps</h5>
+        <p class="card-text">Streamline your software 
+            development and IT 
+            operations with our 
+            DevOps solutions. By 
+            adopting best practices 
+            and automation tools, we 
+            help you accelerate 
+            delivery and drive 
+            continuous improvement.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 13 -->
+  <div class="col">
+    <div class="card card-shadow">
+        <img src="{% static 'images/services/img-4.jpg' %}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Marketing</h5>
+        <p class="card-text">Drive business growth with 
+            our strategic marketing 
+            solutions. From targeted 
+            campaigns to personalized 
+            messaging, we help you 
+            engage your audience and 
+            drive measurable results 
+            for your business.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 14 -->
+  <div class="col">
+    <div class="card card-shadow">
+        <img src="{% static 'images/services/img-1.jpg' %}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Training & Consulting</h5>
+        <p class="card-text">Empower your team with 
+            expert advice and 
+            training from industry 
+            professionals. Our goal is 
+            to help you develop the 
+            skills and expertise 
+            needed to succeed in 
+            today's fast-paced digital 
+            world.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card 15 -->
+  <div class="col">
+    <div class="card card-shadow">
+        <img src="{% static 'images/services/img-1.jpg' %}" class="card-img-top" alt="...">
+
+      <div class="card-body">
+        <h5 class="card-title fw-bold">Skill Development 
+            Center</h5>
+        <p class="card-text">Invest in the future of your 
+            workforce with our skill 
+            development center. From 
+            technical skills to 
+            leadership development, 
+            we provide 
+            comprehensive training 
+            programs designed to 
+            empower individuals and 
+            organizations to thrive.</p>
+      </div>
+    </div>
+  </div>
+  
+</div>
+</div>
+{% endblock body %}
